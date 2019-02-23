@@ -6,7 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  * function
  * promise
  */
-module.exports = () => {
+module.exports = (env) => {
+    console.log('→ env', env);
+
     return {
         mode:    'none',
         devtool: false,
