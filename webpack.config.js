@@ -12,6 +12,9 @@ module.exports = (env) => {
     return {
         mode:    'none',
         devtool: false,
+        output:  {
+            filename: 'build.js',
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 template: './static/template.html',
