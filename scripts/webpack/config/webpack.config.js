@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Constants
 const { PROJECT_ROOT, SOURCE, BUILD, STATIC } = require('../constants');
-const { resolve } = require('path');
 
 /**
  * object
@@ -15,8 +14,9 @@ module.exports = () => {
     return {
         mode:    'none',
         devtool: false,
+        entry:   [ SOURCE ],
         output:  {
-            path:     resolve(__dirname, './build'),
+            path:     BUILD,
             filename: 'bundle.js',
         },
         plugins: [
