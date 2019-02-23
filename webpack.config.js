@@ -8,13 +8,17 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * function
  * promise
  */
-module.exports = Promise.resolve({
-    mode:    'none',
-    devtool: false,
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './static/template.html',
-            title:    'Учим вебпак! 💪🏼🌟🔫',
-        }),
-    ],
-});
+module.exports = async () => {
+    await delay(2000);
+
+    return {
+        mode:    'none',
+        devtool: false,
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: './static/template.html',
+                title:    'Учим вебпак! 💪🏼🌟🔫',
+            }),
+        ],
+    };
+};
