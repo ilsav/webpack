@@ -12,7 +12,18 @@ const chalk = require('chalk');
 
 const compiler = webpack(getConfig());
 
-compiler.run((errors, stats) => {
+compiler.run((error, stats) => {
+    if (error) {
+        // ошибка конфигурации
+        console.error(error.stack || error);
+
+        if (error.details) {
+            console.error(error.details);
+        }
+
+        return;
+    }
+
     const info = stats.toString({
         hash:     true,
         colors:   true,
