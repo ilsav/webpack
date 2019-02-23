@@ -20,6 +20,14 @@ module.exports = () => {
             path:     BUILD,
             filename: 'bundle.js',
         },
+        module: {
+            rules: [
+                {
+                    test: /\.css$/,
+                    use:  [ 'style-loader', 'css-loader' ],
+                },
+            ],
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 template: `${STATIC}/template.html`,
