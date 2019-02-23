@@ -6,3 +6,8 @@
  * 5. compiler
  * 6. init
  */
+
+// Core
+const webpack = require('webpack');
+const getConfig = require('./config/webpack.config');
+const chalk = require('chalk');
