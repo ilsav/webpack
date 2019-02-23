@@ -1,6 +1,6 @@
 import component from './simple-components/dom';
 
-const demoComponent = component();
+let demoComponent = component();
 
 document.body.appendChild(demoComponent);
 
