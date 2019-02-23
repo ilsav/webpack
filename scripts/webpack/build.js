@@ -11,3 +11,10 @@ const webpack = require('webpack');
 const getConfig = require('./config/webpack.config');
 
 const compiler = webpack(getConfig());
+
+compiler.run((errors, stats) => {
+    const info = stats.toString({
+        hash: true,
+    });
+    console.log(info);
+});
