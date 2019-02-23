@@ -16,5 +16,6 @@ compiler.run((errors, stats) => {
     const info = stats.toString({
         hash: true,
     });
+
     console.log(info);
 });
