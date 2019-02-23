@@ -8,7 +8,6 @@ const { resolve } = require('path');
  * promise
  */
 module.exports = (env) => {
-    console.log('→ env', env);
 
     return {
         mode:    'none',
