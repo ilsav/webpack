@@ -2,6 +2,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+// Constants
+const { PROJECT_ROOT, SOURCE, BUILD, STATIC } = require('../constants');
 const { resolve } = require('path');
 
 /**
