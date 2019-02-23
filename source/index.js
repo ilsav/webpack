@@ -1,4 +1,5 @@
 import component from './simple-components/dom';
+import './theme/main.css';
 
 let demoComponent = component();
 
