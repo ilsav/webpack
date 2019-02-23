@@ -1,5 +1,6 @@
 body {
     --color1: '#161619';
+
     min-height: 100vh;
     background-color: var(--color1);
     /* background-image: url('./assets/images/leaves-pattern.png'); */
