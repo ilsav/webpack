@@ -21,7 +21,7 @@ module.exports = () => {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: './static/template.html',
+                template: `${STATIC}/template.html`,
                 title:    'Учим вебпак! 💪🏼🌟🔫',
             }),
             new CleanWebpackPlugin([ 'dist', 'build' ], {
