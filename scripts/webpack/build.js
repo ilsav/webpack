@@ -1,11 +1,13 @@
 /**
  * 1. ✓ webpack
- * 2. compiler
- * 3. webpack config
+ * 2. ✓ webpack config
+ * 3. ✓ compiler
  * 4. init
  */
 
 // Core
 
 const webpack = require('webpack');
-const config = require('./config/webpack.config');
+const getConfig = require('./config/webpack.config');
+
+const compiler = webpack(getConfig());
