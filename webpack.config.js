@@ -7,7 +7,7 @@ const { resolve } = require('path');
  * function
  * promise
  */
-module.exports = (env) => {
+module.exports = () => {
     return {
         mode:    'none',
         devtool: false,
