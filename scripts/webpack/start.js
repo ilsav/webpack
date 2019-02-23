@@ -15,3 +15,20 @@ const DevServer = require('webpack-dev-server');
 const hot = require('webpack-hot-middleware');
 
 const compiler = webpack(getConfig());
+
+const server = new DevServer(compiler, {
+    host:               'localhost',
+    port:               3000,
+    historyApiFallback: true,
+    overlay:            true,
+    quiet:              true,
+    clientLogLevel:     'none',
+    noInfo:             true,
+    after:              (app) => {
+        app.use(
+            hot(compiler, {
+                log: false,
+            }),
+        );
+    },
+});
