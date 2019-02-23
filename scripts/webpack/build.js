@@ -8,6 +8,7 @@
 // Core
 const webpack = require('webpack');
 const getConfig = require('./config/webpack.config');
+const chalk = require('chalk');
 
 const compiler = webpack(getConfig());
 
@@ -20,4 +21,5 @@ compiler.run((errors, stats) => {
     });
 
     console.log(info);
+    console.log(chalk.greenBright('✓ Build completed!'));
 });
