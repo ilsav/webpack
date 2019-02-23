@@ -2,18 +2,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const { resolve } = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-
-let pathsToClean = [
-  'dist',
-  'build',
-];
-
-let cleanOptions = {
-  // root: '/full/webpack/root/path',
-}
-
+// Constants
+const { PROJECT_ROOT, SOURCE, BUILD, STATIC } = require('../constants');
 
 /**
  * object
@@ -24,21 +14,18 @@ module.exports = () => {
     return {
         mode:    'none',
         devtool: false,
+        entry:   [ SOURCE ],
         output:  {
-            path:     resolve(__dirname, './build'),
+            path:     BUILD,
             filename: 'bundle.js',
         },
         plugins: [
-            new CleanWebpackPlugin(
-                pathsToClean,
-                cleanOptions,
-            ),
             new HtmlWebpackPlugin({
-                template: './static/template.html',
+                template: `${STATIC}/template.html`,
                 title:    'Учим вебпак! 💪🏼🌟🔫',
             }),
             new CleanWebpackPlugin([ 'dist', 'build' ], {
-                root:    __dirname,
+                root:    PROJECT_ROOT,
                 verbose: true,
             }),
         ],
