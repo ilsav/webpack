@@ -11,3 +11,5 @@
 const webpack = require('webpack');
 const getConfig = require('./config/webpack.config');
 const chalk = require('chalk');
+const DevServer = require('webpack-dev-server');
+const hot = require('webpack-hot-middleware');
