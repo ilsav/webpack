@@ -1,6 +1,8 @@
 /**
  * 1. webpack
- * 2. webpack config
- * 3. compiler
- * 4. init
+ * 2. webpack dev server
+ * 3. webpack hot middleware
+ * 4. webpack config
+ * 5. compiler
+ * 6. init
  */
