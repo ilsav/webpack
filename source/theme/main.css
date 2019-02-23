@@ -2,7 +2,7 @@ body {
     --color1: '#161619';
 
     min-height: 100vh;
-    background-color: #161619;
+    background-color: var(--color1);
     /* background-image: url('./assets/images/leaves-pattern.png'); */
     /* background-image: url('./assets/images/1-jellyfish-original.jpg'); */
     /* background-size: 100%; */
