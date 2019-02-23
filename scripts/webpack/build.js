@@ -13,8 +13,11 @@ const compiler = webpack(getConfig());
 
 compiler.run((errors, stats) => {
     const info = stats.toString({
-        hash: true,
-        colors: true
+        hash:   true,
+        colors: true,
+        modules: false
+
+
     });
 
     console.log(info);
