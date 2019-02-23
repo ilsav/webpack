@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  * function
  * promise
  */
-module.exports = {
+module.exports = Promise.resolve({
     mode:    'none',
     devtool: false,
     plugins: [
@@ -15,4 +15,4 @@ module.exports = {
             title:    'Учим вебпак! 💪🏼🌟🔫',
         }),
     ],
-};
+});
