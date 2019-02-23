@@ -1,16 +1,12 @@
 // Core
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 /**
  * object
  * function
  * promise
  */
-module.exports = async () => {
-    await delay(2000);
-
+module.exports = () => {
     return {
         mode:    'none',
         devtool: false,
