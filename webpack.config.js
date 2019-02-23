@@ -1,5 +1,6 @@
 // Core
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve } = require('path');
 
 /**
  * object
@@ -13,7 +14,8 @@ module.exports = (env) => {
         mode:    'none',
         devtool: false,
         output:  {
-            filename: 'build.js',
+            // path:
+            filename: 'bundle.js',
         },
         plugins: [
             new HtmlWebpackPlugin({
