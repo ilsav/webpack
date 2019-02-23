@@ -25,7 +25,7 @@ module.exports = () => {
                 title:    'Учим вебпак! 💪🏼🌟🔫',
             }),
             new CleanWebpackPlugin([ 'dist', 'build' ], {
-                root:    __dirname,
+                root:    PROJECT_ROOT,
                 verbose: true,
             }),
         ],
