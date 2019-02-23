@@ -16,9 +16,12 @@ const hot = require('webpack-hot-middleware');
 
 const compiler = webpack(getConfig());
 
+// Constants
+const { HOST, PORT } = require('./constants');
+
 const server = new DevServer(compiler, {
-    host:               'localhost',
-    port:               3000,
+    host:               HOST,
+    port:               PORT,
     historyApiFallback: true,
     overlay:            true,
     quiet:              true,
@@ -33,10 +36,10 @@ const server = new DevServer(compiler, {
     },
 });
 
-server.listen(3000, 'localhost', () => {
+server.listen(PORT, HOST, () => {
     console.log(
         `${chalk.greenBright('→ Server listening on')} ${chalk.blueBright(
-            'http://localhost:3000',
+            `http://${HOST}:${PORT}`,
         )}`,
     );
 });
