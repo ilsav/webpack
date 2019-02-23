@@ -32,3 +32,11 @@ const server = new DevServer(compiler, {
         );
     },
 });
+
+server.listen(3000, 'localhost', () => {
+    console.log(
+        `${chalk.greenBright('→ Server listening on')} ${chalk.blueBright(
+            'http://localhost:3000',
+        )}`,
+    );
+});
