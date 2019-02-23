@@ -8,12 +8,11 @@ const { resolve } = require('path');
  * promise
  */
 module.exports = (env) => {
-
     return {
         mode:    'none',
         devtool: false,
         output:  {
-            // path:
+            path:     resolve(__dirname, './build'),
             filename: 'bundle.js',
         },
         plugins: [
