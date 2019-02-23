@@ -1,5 +1,5 @@
 body {
-    --color1: #161619;
+    --color1: rebeccapurple;
 
     min-height: 100vh;
     background-color: var(--color1);
